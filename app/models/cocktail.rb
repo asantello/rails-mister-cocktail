@@ -2,6 +2,8 @@ class Cocktail < ApplicationRecord
   has_many :doses, dependent: :destroy
   has_many :ingredients, through: :doses
 
+  #each cocktail has one photo attached
+  has_one_attached :photo
 
   validates :name, presence: true, uniqueness: true
 end

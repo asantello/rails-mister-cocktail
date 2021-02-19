@@ -2,6 +2,8 @@
   <%= @cocktail.name %>
 </h1>
 
+<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+
 <p>In order to prepare a great <%= @cocktail.name %> you will need:</p>
 
 <div>
@@ -17,7 +19,6 @@
 </div>
 
 
-<div>
   <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail) %>
 </div>
 
